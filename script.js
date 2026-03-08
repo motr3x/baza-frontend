@@ -38,3 +38,12 @@ var modal_three = document.getElementById('modal-three');
  modal_exit_three.onclick = function() {
   modal_three.style.display = "none";
 }
+
+
+fetch('https://api.allorigins.win/raw?url=https://v9b2ws-109-161-72-40.ru.tuna.am/api/gallery')
+  .then(response => {
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return response.json();
+  })
+  .then(data => console.log('Данные галереи:', data))
+  .catch(error => console.error('Ошибка fetch:', error));
