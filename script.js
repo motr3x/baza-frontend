@@ -19,7 +19,7 @@ function loadGalleryImages() {
         'https://thingproxy.freeboard.io/fetch/'
     ];
     
-    const targetUrl = 'https://es6vs7-95-27-96-80.ru.tuna.am/api/gallery';
+    const targetUrl = 'https://6z8o4x-95-27-96-80.ru.tuna.am/api/gallery';
     
     // Пробуем первый прокси
     tryProxy(0);
@@ -109,7 +109,7 @@ function insertImagesIntoModal(modalElement, imagesData) {
             // Формируем URL изображения
             let imageUrl = image.url;
             if (imageUrl && !imageUrl.startsWith('http')) {
-                imageUrl = 'https://es6vs7-95-27-96-80.ru.tuna.am/' + imageUrl;
+                imageUrl = 'https://6z8o4x-95-27-96-80.ru.tuna.am/' + imageUrl;
             }
             
             img.src = imageUrl;
