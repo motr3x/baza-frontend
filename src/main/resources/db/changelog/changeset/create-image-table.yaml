@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20260312-001-create-image-table
+      author: yourname
+      changes:
+        - createTable:
+            tableName: image
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: filename
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: url
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: caption
+                  type: varchar(1000)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false

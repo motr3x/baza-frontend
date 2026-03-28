@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20260312-002-insert-image-samples
+      author: yourname
+      changes:
+        - insert:
+            tableName: image
+            columns:
+              - column:
+                  name: filename
+                  value: avatar.jpg
+              - column:
+                  name: url
+                  value: /uploads/images/avatar.jpg
+              - column:
+                  name: caption
+                  value: Профильное фото пользователя
+        - insert:
+            tableName: image
+            columns:
+              - column:
+                  name: filename
+                  value: product1.png
+              - column:
+                  name: url
+                  value: /uploads/images/product1.png
+              - column:
+                  name: caption
+                  value: null
